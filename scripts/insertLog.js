@@ -1,12 +1,11 @@
 $(document).ready(function()
 {
-
 	//Click event for log button click. 
 	$('#log_submit').click(function()
 	{
 
-		var log_val_field = " \" " + $('#log_field').val() + " \" "; 
-		var insertData = {log_val:log_val_field};
+		var log_val_field =$('#log_field').val(); 
+		var insertData = {log_val : log_val_field};
 
 		$.ajax(
 		{	

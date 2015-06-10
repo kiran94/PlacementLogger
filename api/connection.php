@@ -7,7 +7,7 @@
 			require_once "connection_info.php";
 
 			$con = mysqli_connect($host, $username, $password);
-			mysqli_select_db($db);
+			mysqli_select_db($con, $db);
 			return $con; 
 		}
 	}

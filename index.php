@@ -29,7 +29,7 @@
 				<form id='log_form'>
 					<h3>Enter Log:</h3>
 
-					<input type='text' name='log_val' id ='log_field'/>
+					<input type='text' name='log_val' id='log_field' />
 
 					<br />
 					<br />
