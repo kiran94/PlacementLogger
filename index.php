@@ -27,21 +27,18 @@
 		<div class='row'>
 			<div class='col-xs-12'>
 				<form id='log_form'>
-
 					<h3>Enter Log:</h3>
-					<input type='text' name='log_val' />
 
+					<input type='text' name='log_val' id ='log_field'/>
+
+					<br />
+					<br />
 
 					<button type="button" class="btn btn-primary" id="log_submit">Submit</button>
-
 				</form>
 			</div>
 		</div>
 		<!-- END ROW -->
-
-
-
-
 
 
 	</div>
