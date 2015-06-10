@@ -3,12 +3,16 @@
 <head>
 	<title>Placement Logger</title>
 
+	<!-- META -->
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- END META -->
 
+    <!-- STYLES -->
     <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/custom.css" />
+    <!-- END STYLES -->
 </head>
 <body>
 	<!-- CONTAINER -->
@@ -22,10 +26,16 @@
 		</div>
 		<!-- END ROW -->
 
+		<?php
+			require_once "checkTodayLog.php";
+		?>
+
 
 		<!-- ROW -->
 		<div class='row'>
 			<div class='col-xs-12'>
+
+				<!-- FORM -->
 				<form id='log_form'>
 					<h3>Enter Log:</h3>
 
@@ -36,16 +46,18 @@
 
 					<button type="button" class="btn btn-primary" id="log_submit">Submit</button>
 				</form>
+				<!-- END FORM -->
+
 			</div>
 		</div>
 		<!-- END ROW -->
-
-
 	</div>
 	<!-- END CONTAINER -->
 
+	<!-- SCRIPTS -->
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/insertLog.js"></script>
+	<!-- END SCRIPTS -->
 </body>
 </html>
