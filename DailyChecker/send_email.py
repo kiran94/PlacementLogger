@@ -2,10 +2,12 @@ def send_email():
     import smtplib
     from creden import creden
 
+    cred = creden()
+
     FROM = 'Daily Checker'
-    TO = ['kiran_patel94@hotmail.com'] 
+    TO = [cred.youremail] 
     SUBJECT = "Daily Checker Notification"
-    TEXT = "You have not updated your logs today do so at http://kiransprojects.co.uk/PlacementLogger/"
+    TEXT = "You have not updated your logs today do so at " + str(cred.url)
 
     # Prepare actual message
     message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
@@ -16,7 +18,6 @@ def send_email():
         server.ehlo()
         server.starttls()
 
-        cred = creden()
 
         server.login(cred.gmail_user, cred.gmail_pwd)
         server.sendmail(FROM, TO, message)
