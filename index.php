@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang='en'>
 <head>
-	<title>Placement Logger</title>
+	<title>Home | Placement Logger</title>
 
 	<!-- META -->
 	<meta charset="utf-8" />

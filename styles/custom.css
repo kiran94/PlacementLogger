@@ -8,3 +8,9 @@
 {
 	display: none; 
 }
+
+#log_history tr,th,td
+{
+	border: 0.1em solid black;
+	padding: 2em;
+}
