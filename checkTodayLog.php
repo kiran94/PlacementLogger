@@ -13,15 +13,15 @@
 
 	while($row = mysqli_fetch_array($result))
 	{
-		echo $row['log_date'];
-		echo "<br/>";
-		echo $current_date;
+		// echo $row['log_date'];
+		// echo "<br/>";
+		// echo $current_date;
 
 
 		if($row['log_date'] == $current_date)
 		{
 			echo "<div class='container'><div class='row'><div class='col-xs-12'>";
-			echo '<div class="alert alert-success" role="alert">...</div>";';
+			echo '<div class="alert alert-success" role="alert">Successfully Logged Today</div>';
 			echo "</div></div></div>";
 		}
 	}
