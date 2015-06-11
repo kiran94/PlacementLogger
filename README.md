@@ -11,15 +11,7 @@ The application makes use of the LAMP stack
 1. Clone the repo and host the web application on a server.
 2. Use the SQL schema to create a table in a MYSQL database. 
 3. Go to /api/connection_info.php and enter MYSQL details on where the table is located. 
-4. Host the Python application and create a python file called "creden.py". Paste the following: 
-
-class creden:
-	gmail_user = ""
-	gmail_pwd = ""
-	url = ""
-	youremail = ""
-
-and enter your gmail username and password aswell as the URL of where your logs are hosted. youremail = The email you would like be to notified when you have not logged. 
+4. Host the Python application and use creden.py found in the repo directory to enter your gmail username and password aswell as the URL of where your logs are hosted. youremail = The email you would like be to notified when you have not logged. ENSURE YOU MOVE THIS FILE INTO DailyChecker with the rest of the python files before running. 
 
 NOTE: Sometimes gmail will block an application using your gmail account due to security in this case go to: https://www.google.com/settings/security/lesssecureapps
 
