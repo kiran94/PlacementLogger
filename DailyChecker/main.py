@@ -14,7 +14,7 @@ printTerminal("Starting Daily Checker..")
 while(True):
 	#Make Request
 	printTerminal("Making GET request..")
-	$req = makeRequest()
+	req = makeRequest()
 	url = "http://kiransprojects.co.uk/PlacementLogger/api/getLatest.php"
 	date = $req.request(url)
 
