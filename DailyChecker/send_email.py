@@ -1,12 +1,11 @@
 def send_email():
     import smtplib
+    import creden
 
-    gmail_user = "user@gmail.com"
-    gmail_pwd = "secret"
-    FROM = 'user@gmail.com'
-    TO = ['recepient@mailprovider.com'] #must be a list
-    SUBJECT = "Testing sending using gmail"
-    TEXT = "Testing sending mail using gmail servers"
+    FROM = 'Daily Checker'
+    TO = ['kiran_patel94@hotmail.com'] 
+    SUBJECT = "Daily Checker Notification"
+    TEXT = "You have not updated your logs today do so at http://kiransprojects.co.uk/PlacementLogger/"
 
     # Prepare actual message
     message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
