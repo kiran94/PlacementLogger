@@ -20,9 +20,9 @@
 
 		if($row['log_date'] == $current_date)
 		{
-			echo "<div class='container'><div class='row'><div class='col-xs-12'>";
+			echo "<div class='row'><div class='col-xs-12'>";
 			echo '<div class="alert alert-success" role="alert">Successfully Logged Today</div>';
-			echo "</div></div></div>";
+			echo "</div></div>";
 		}
 	}
 ?>

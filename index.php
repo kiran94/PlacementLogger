@@ -21,7 +21,12 @@
 		<div class='row'>
 			<div class='col-xs-12'>
 				<h1>Placement Logger</h1>
-				<hr />
+				<!-- NAV -->
+				<ul class="nav nav-tabs">
+				  <li role="presentation" class="active"><a href="#">Home</a></li>
+				  <li role="presentation"><a href="history.php">Past Logs</a></li>
+				</ul>
+				<!-- END NAV -->
 			</div>
 		</div>
 		<!-- END ROW -->
@@ -29,6 +34,14 @@
 		<?php
 			require_once "checkTodayLog.php";
 		?>
+
+		<!-- NOTIFICATION -->
+		<div class='row' id='notification'>
+			<div class='col-xs-12'>
+				<div class="alert alert-success" role="alert">Successfully Logged Today</div>
+			</div>
+		</div>
+		<!-- END NOTIFICATION -->
 
 
 		<!-- ROW -->

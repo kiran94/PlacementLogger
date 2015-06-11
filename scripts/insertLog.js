@@ -15,12 +15,11 @@ $(document).ready(function()
 			success: function(data)
 			{
 				var parsed = JSON.parse(data);
-				alert(parsed.Result)
+				$('#notification').css('display','block');
 			},
 			error: function(data)
 			{
-				var parsed = JSON.parse(data);
-				alert(parsed.Result)
+				var parsed = JSON.parse(data);	
 			}
 		});
 		//END AJAX
