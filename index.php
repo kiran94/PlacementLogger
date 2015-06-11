@@ -52,7 +52,7 @@
 				<form id='log_form'>
 					<h3>Enter Log:</h3>
 
-					<input type='text' name='log_val' id='log_field' />
+					<textarea type='text' name='log_val' id='log_field'	></textarea>
 
 					<br />
 					<br />
