@@ -1,5 +1,5 @@
 <?php
-	require_once "api/connection.php";
+	require_once "connection.php";
 
 	$connect = new connection(); 
 
