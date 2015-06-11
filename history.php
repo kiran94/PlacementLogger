@@ -32,15 +32,13 @@
 		<!-- END ROW -->
 
 		<?php
-			//require_once "checkTodayLog.php";
-
 			require_once "api/connection.php";
 
 			$connect = new connection(); 
 
 			$con = $connect->makeConnection();
 
-			$query = "SELECT * FROM log";
+			$query = "SELECT * FROM log ORDER BY log_id DESC";
 
 			$result = mysqli_query($con, $query);
 
@@ -63,6 +61,10 @@
 
 			mysqli_close($con);
 		?>
+
+		<!-- FOOTER -->
+		<?php require_once "footer.php" ?>
+		<!-- END FOOTER -->
 
 		
 	</div>
