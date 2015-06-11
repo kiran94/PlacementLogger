@@ -1,6 +1,6 @@
 def send_email():
     import smtplib
-    import creden
+    from creden import creden
 
     FROM = 'Daily Checker'
     TO = ['kiran_patel94@hotmail.com'] 
@@ -15,10 +15,13 @@ def send_email():
         server = smtplib.SMTP("smtp.gmail.com", 587) #or port 465 doesn't seem to work!
         server.ehlo()
         server.starttls()
-        server.login(gmail_user, gmail_pwd)
+
+        cred = creden()
+
+        server.login(cred.gmail_user, cred.gmail_pwd)
         server.sendmail(FROM, TO, message)
         #server.quit()
         server.close()
-        print 'successfully sent the mail'
-    except:
-        print "failed to send mail"
+        print 'Main Sent.'
+    except Exception, e:
+        print "Mail Failed " + str(e)
