@@ -31,6 +31,8 @@
 		</div>
 		<!-- END ROW -->
 
+		<br/>
+
 		<?php
 			require_once "api/connection.php";
 
