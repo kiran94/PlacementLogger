@@ -103,8 +103,7 @@
 			</div>
 			<!-- END TABLE -->
 
-			<div class='col-xs-12 col-sm-2'>
-
+			<div class='col-xs-12 col-sm-2' id='month_links'>
 				<ul>
 					<?php 
 						for($i=1; $i<=12; $i++)
@@ -114,7 +113,6 @@
 						}
 					?>
 				</ul>
-
 			</div>
 		</div>
 		<!-- END TABLE ROW -->
