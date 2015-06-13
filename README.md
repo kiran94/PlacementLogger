@@ -20,3 +20,9 @@ NOTE: Sometimes gmail will block an application using your gmail account due to 
 Once the script is running it will check everyday to see if you have logged your day yet. If you have not it will email you to let you know you have not yet and then the URL. 
 
 The Web application will track your logs on a daily basis and store them in a MYSQL database. 
+
+EXAMPLE: 
+
+I have it organised so that the web application is hosted on online so I can access it from anywhere and so that the python script is running on a raspberry pi at home which is always running. The script is running on a thread on the pi using the 'screen' program. 
+
+Ideally I would want the python script to run on the same server the web application is running on however my web hosting provider does not provide this. 
