@@ -33,36 +33,91 @@
 
 		<br/>
 
-		<?php
-			require_once "api/connection.php";
+		<!-- TABLE ROW -->
+		<div class='row'>
 
-			$connect = new connection(); 
+			<!-- TABLE -->
+			<div class='col-xs-12 col-sm-10'>
+				<?php
+					require_once "api/connection.php";
+					require_once "HistoryFormat.php";
 
-			$con = $connect->makeConnection();
+					//Create connection object
+					$connect = new connection(); 
 
-			$query = "SELECT * FROM log ORDER BY log_id DESC";
+					//Make a connection to the database
+					$con = $connect->makeConnection();
 
-			$result = mysqli_query($con, $query);
+					//Build query to get logs
+					$query = "SELECT * FROM log ORDER BY log_id DESC";
 
-			echo "<table class='table table-hover'>";
+					//Execute query
+					$result = mysqli_query($con, $query);
 
-			echo "<tr>";
-				echo "<th>Date</th>";
-				echo "<th>Log</th>";
-			echo "</tr>";
+					//Table Markup
+					echo "<table class='table table-hover'>";
 
-			while($row = mysqli_fetch_array($result))
-			{
-				echo "<tr>";
-					echo "<td>" . $row['log_date'] ."</td>";
-					echo "<td>" . $row['log_val'] ."</td>";
-				echo "</tr>";
-			}
+					//Create HistoryFormat object
+					$monthDe = new monthDetails(); 
+					$currentMonth = "";
 
-			echo "</table>";
+					//For each row markup the data. 
+					while($row = mysqli_fetch_array($result))
+					{
+						//Get current Date
+						$currentDate = $row['log_date']; 
 
-			mysqli_close($con);
-		?>
+						$month_no = substr($currentDate, 5, 2);
+						//Get the month name of the month number. 	
+						$newMonth = $monthDe->getMonth($month_no); 
+
+						if($newMonth != $currentMonth)
+						{
+							$currentMonth = $newMonth; 
+							echo "<tr id='" . $currentMonth . "'>";
+							echo "<td><h3>" . $newMonth ."</h3></td>";
+							echo "<td></td>";
+							echo "</tr>";
+
+							//Table headers
+							echo "<tr>";
+								echo "<th>Date</th>";
+								echo "<th>Log</th>";
+							echo "</tr>";
+						}
+						
+						echo "<tr>";
+							echo "<td>" . $currentDate ."</td>";
+							echo "<td>" . $row['log_val'] ."</td>";
+						echo "</tr>";
+
+					
+					}
+
+					//End table
+					echo "</table>";
+
+					//Close connection. 
+					mysqli_close($con);
+				?>
+			</div>
+			<!-- END TABLE -->
+
+			<div class='col-xs-12 col-sm-2'>
+
+				<ul>
+					<?php 
+						for($i=1; $i<=12; $i++)
+						{
+							$currentMonth = $monthDe->getMonth($i);
+							echo "<li><a href='#" . $currentMonth . "'>" . $currentMonth ."</a></li>";
+						}
+					?>
+				</ul>
+
+			</div>
+		</div>
+		<!-- END TABLE ROW -->
 
 		<!-- FOOTER -->
 		<?php require_once "footer.php" ?>
