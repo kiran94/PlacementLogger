@@ -1,6 +1,7 @@
 import time
 from makeRequest import makeRequest
 from send_email import send_email
+#import datetime
 
 def programSleep():
 	toSleep = 86400
@@ -12,6 +13,11 @@ def printTerminal(message):
 printTerminal("Starting Daily Checker..")
 
 while(True):
+	printTerminal("Checking Time..")
+
+	#FOR FUTURE DEV
+	#if time.strftime("%H:%M", time.gmtime()) == "18:00":
+
 	#Make Request
 	printTerminal("Making GET request..")
 	req = makeRequest()
@@ -36,5 +42,12 @@ while(True):
 	#Sleep
 	printTerminal("Program Sleeping..")
 	programSleep()
+#else:
+	#printTerminal("[+] Not Timeq")
 
+
+
+
+
+	
 
